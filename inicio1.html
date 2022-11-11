@@ -5,7 +5,15 @@
 </head>
 <body>
 <script>
-    document.writeln("Hola Mundo!");
+    document.writeln("<h1>Mi página web</h1>");
+    var estado = confirm("¿De verdad quieres cerrar sesión?")
+    if (!estado) {
+        document.writeln("<p>Hola Mundo!</p>");
+
+    }else{
+        document.writeln("<p>Hasta luego</p>");
+    }
+
 </script>
 </body>
 </html>
