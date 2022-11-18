@@ -1,0 +1,11 @@
+.resultado{
+    background-color: blue;
+    height: 50px;
+    padding-left: 1%;
+    font-size: xx-large;
+    color: white;
+}
+h1{
+    font-size: 100px;
+    text-shadow: 5px 5px 10px black;
+}

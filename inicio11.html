@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./inicio10.css">
+    <link rel="stylesheet" href="./inicio11.css">
 </head>
 <body>
-    <h1>La resta de dos números</h1>
-    <div class="resultado">
+    
+    <div id="resta"></div>
+    <div id="multiplicacion"></div>
         <script>
             let dato1, num1;
             let dato2, num2;
@@ -19,10 +20,12 @@
             num2 = parseInt(dato2);
             let resultado;
             resultado = num1 - num2;
-            document.write("El resultado de la resta es " + " " + resultado);
-            
-            
+            document.getElementById("resta").innerHTML = (`El resultado de la resta es ${resultado}`);
+            resultado = num1 * num2;
+            document.getElementById("multiplicacion").innerHTML = (`El resultado de la multiplicación es ${resultado}`);
+           
         </script>
     </div>
+    
 </body>
 </html>

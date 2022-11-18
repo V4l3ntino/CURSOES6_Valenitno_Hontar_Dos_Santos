@@ -1,0 +1,16 @@
+#resta{
+    font-size: 50px;
+    padding: 50px;
+    text-shadow: 5px 5px 5px black;
+    background-color: orange;
+    color: white;
+    text-align: center;
+}
+#multiplicacion{
+    font-size: 50px;
+    padding: 50px;
+    text-shadow: 5px 5px 5px black;
+    background-color: purple;
+    color: white;
+    text-align: center;
+}
