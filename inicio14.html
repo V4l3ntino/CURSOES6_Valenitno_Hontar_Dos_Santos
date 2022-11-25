@@ -9,22 +9,21 @@
 <body>
     <script>
         {
-            let numero = prompt("Escribe el número que estoy pensando");
-            if (numero < 10000) {
+            var numero;
+            numero = parseInt(prompt("Escribe el número que estoy pensando"));
+            if (numero !=7) {
                 while (numero != 7)
             {
                 switch(numero) {
-                case "7":
-                    alert("Correcto, el número es 7");
-                    break;
                 default: 
                     alert("El número no es " + " " + numero );
                     break;
                 }
                 numero = prompt("Escribe el número que estoy pensando");
             }
+            document.write("Exacto, el número es" + " " +numero)
             } else {
-                document.write("Exacto, el número es" + numero)
+                document.write("Exacto, el número es" + " " +numero)
             }
         }
     </script>
