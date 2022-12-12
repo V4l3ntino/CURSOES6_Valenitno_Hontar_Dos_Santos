@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+      </head>
+<body>
+    <!--Realizar programa con la introducción de la edad por parte del
+usuario. NO PERMITIR EDADES MENORES QUE 1 AÑO NI MAYORES QUE 120 años. La computadora indica
+que: "Sí tiene permiso de acceso" si la edad es mayor que 18 años-->    
+<script>
+
+ let etapa,edad;
+
+ edad = parseInt(prompt("Edad?", "0"));
+ 
+if ((edad>=1)&&(edad<=120)){
+    if (edad>=18) 
+    {
+        document.write(`<h3>Sí tiene permiso de acceso</h3>`);
+    }else{
+        document.write(`<h3>NO tiene permiso de acceso</h3>`);
+    }
+}else{
+    document.write(`<h3>NO SE PERMITEN EDADES MENORES QUE 1 AÑO NI MAYORES QUE 120 AÑOS</h3>`);
+}
+ 
+ 
+ 
+</script>
+</body>
+</html>

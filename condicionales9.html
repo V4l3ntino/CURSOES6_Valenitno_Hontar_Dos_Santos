@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <!--Si un alumno es de FP y tiene más de 18 años, Sí tiene acceso al portal 
+    #web. (por pantalla: Bienvenid@)
+    #Si un alumno es de FP y NO tiene más de 18 años, 
+    #NO tiene acceso al portal web.-->    
+<script>
+
+ let etapa,edad;
+
+ etapa = prompt("Estapa educativa?", "");
+ edad = parseInt(prompt("Edad?", "0"));
+ if ((etapa.toUpperCase()=="FP") && (edad >=18))
+ {
+    document.write(`<h3>Bienvenid@</h3>`);
+ }
+
+ else 
+ {
+    document.write(`<h3>NO tiene acceso al portal web</h3>`);
+ }
+ 
+ 
+</script>
+</body>
+</html>

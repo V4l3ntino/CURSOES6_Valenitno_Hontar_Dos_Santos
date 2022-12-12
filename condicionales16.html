@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<head><meta charset="utf-8">
+</head>
+<body>
+    <script>
+        //
+        let dia,mes,anno;
+        do{
+            anno=prompt('Introduzca el año:','');
+            anno=parseInt(anno);
+        if (anno<0 || isNaN(anno)){
+            alert("Introduce un año válido");
+        }
+        }while (anno<0 || isNaN(anno));
+        
+       do{
+        mes=prompt('Introduzca el número del mes:','');
+        mes=parseInt(mes);
+        if (mes<1 || mes>12|| isNaN(mes)){
+            alert("Introduce un mes entre 1 y 12");
+        }
+       }while (mes<1 || mes>12 || isNaN(mes));
+       
+        if (mes==1 || mes==3 || mes==5 || mes==7 || mes==8 || mes ==10 || mes==12)
+        {
+           document.write('Este mes tiene 31 dias.');
+        }
+        else if (mes==2){
+           if(anno%4==0)
+               document.write('Este mes tiene 29 dias.');
+           else
+               document.write('Este mes tiene 28 dias.');
+        }
+        else{
+           document.write('Este mes tiene 30 dias.');
+        }
+       </script>
+</body>
+
+</html>

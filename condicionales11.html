@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!--
+        Si el usuario introduce como origen la ciudad de Palma y como destino Barcelona, el descuento se establece
+en el 5%. Con el mismo origen, si el destino es Madrid el descuento es del 10% y si el destino es Valencia , el
+descuento es del 15%.
+    -->
+    <script>
+        let origen,destino,descuento=0;
+    
+        origen = prompt("Origen?", "");
+        destino = prompt("Destino?", "");
+        if (origen=="Palma"){
+            if (destino =="Barcelona")
+            {
+                descuento = 5;
+            }
+            else if (destino == "Madrid")
+            {
+                descuento = 10;
+            } 
+            else if (destino == "Valencia")
+            {
+                descuento = 15;
+            }
+        }
+        document.write(`<h3>Su descuento es ${descuento}%</h3> `);
+    </script>
+
+</body>
+</html>
