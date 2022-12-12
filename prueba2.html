@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--   Realizar programa en el que el usuario introduce el número del mes
+ (1 al 12) y el código responde si ese mes tiene 30 o 31 dias.  -->
+    <script>
+        let mes, anno; 
+        do {
+            anno=window.prompt("Introduce el año", "");
+            anno=parseInt(anno);
+            if(isNaN(anno)||anno<=0 ){
+                alert("Porfavor introduce un número correcto superior a 0");
+            }
+        } while (isNaN(anno)||anno<=0 );
+        do {
+            mes=window.prompt("Introduce el mes de año","");
+            mes=parseInt(mes);
+            if(isNaN(mes)||mes<=0||mes>12){
+                alert("No tiene sentido el mes del año que estás poniendo");
+            }
+        } while (isNaN(mes)||mes<=0||mes>12);
+        if (mes==1||mes==3||mes==5||mes==7||mes==8||mes==10||mes==12) 
+        {
+            document.write("Este mes del año tiene 31 días");
+        } 
+        else if(mes==2){
+            if (anno%4==0) 
+                document.write(`Este mes del año es febrero y tiene 29 días, un día más por ser una año bisiesto`);
+            else 
+                document.write("Este mes del año tiene 28 días");
+            
+        }
+        else{
+            document.write("Este mes de año tiene 30 días");
+        }
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a,b,resultado,num1,num2,pregunta
+        pregunta=window.prompt("Escoge que operación quieres realizar: SUMA,RESTA,MULTIPLICACIÓN,DIVISIÓN","");
+        if (pregunta.toUpperCase()=="SUMA"||pregunta.toUpperCase()=="SUMAR") {
+            do {
+            a=window.prompt("Elige el número para el a", "");
+            num1=parseInt(a);
+            if(isNaN(num1)){
+                alert("Esto no es un número porfavor repítalo de nuevo");
+            }
+        } while (isNaN(num1));
+        do {
+            b=window.prompt("Elige el número para el b", "");
+            num2=parseInt(b);
+            if(isNaN(num2)){
+                alert("Esto no es un número porfavor repítalo de nuevo");
+            }
+        } while (isNaN(num2));
+        resultado=num1 + num2;
+        document.write("Bueno pues el resultado de tu suma eesss " + resultado)
+        } else if(pregunta.toUpperCase()=="RESTA"||pregunta.toUpperCase()=="RESTAR"){
+            do {
+            a=window.prompt("Elige el número para el a", "");
+            num1=parseInt(a);
+            if(isNaN(num1)){
+                alert("Esto no es un número porfavor repítalo de nuevo");
+            }
+        } while (isNaN(num1));
+        do {
+            b=window.prompt("Elige el número para el b", "");
+            num2=parseInt(b);
+            if(isNaN(num2)){
+                alert("Esto no es un número porfavor repítalo de nuevo");
+            }
+        } while (isNaN(num2));
+        resultado=num1 - num2;
+        document.write("Bueno pues el resultado de tu resta eesss " + resultado)
+        }
+        if (pregunta.toUpperCase()=="MULTIPLICACIÓN" || pregunta.toUpperCase()=="MULTIPLICACION"||pregunta.toUpperCase()=="MULTIPLICAR") {
+            do {
+            a=window.prompt("Elige el número para el a", "");
+            num1=parseInt(a);
+            if(isNaN(num1)){
+                alert("Esto no es un número porfavor repítalo de nuevo");
+            }
+        } while (isNaN(num1));
+        do {
+            b=window.prompt("Elige el número para el b", "");
+            num2=parseInt(b);
+            if(isNaN(num2)){
+                alert("Esto no es un número porfavor repítalo de nuevo");
+            }
+        } while (isNaN(num2));
+        resultado=num1 * num2;
+        document.write("Bueno pues el resultado de tu multiplicación eesss " + resultado)
+        } else if(pregunta.toUpperCase()=="DIVISIÓN"||pregunta.toUpperCase()=="DIVISION"||pregunta.toUpperCase()=="DIVIDIR"){
+            do {
+            a=window.prompt("Elige el número para el a", "");
+            num1=parseInt(a);
+            if(isNaN(num1)){
+                alert("Esto no es un número porfavor repítalo de nuevo");
+            }
+        } while (isNaN(num1));
+        do {
+            b=window.prompt("Elige el número para el b", "");
+            num2=parseInt(b);
+            if(isNaN(num2)){
+                alert("Esto no es un número porfavor repítalo de nuevo");
+            }
+        } while (isNaN(num2));
+        resultado=num1 / num2;
+        document.write("Bueno pues el resultado de tu división eesss " + resultado)
+        }
+        
+    </script>
+</body>
+</html>
