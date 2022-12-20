@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Función-ejercicio</title>
+</head>
+<body>
+    <!--
+    Funciones 9) Realizar un programa con una función: 
+    Esta función muestra en pantalla la suma de
+    dos números introducidos por el usuario en otra parte del código. 
+    -->
+
+    <p id="salida"></p>
+
+
+    <script>
+        let numero1, numero2
+
+        numero1= parseInt(window.prompt("Introduce aquí tu primer número",""));
+        numero2= parseInt(window.prompt("Introduce aquí tu segundo número",""));
+        
+        function suma (x,y){
+            return x + y
+        }
+        
+        document.getElementById("salida").innerHTML = ("El resultado de tu suma eeessss"+suma(numero1,numero2));
+    </script>
+</body>
+</html>
