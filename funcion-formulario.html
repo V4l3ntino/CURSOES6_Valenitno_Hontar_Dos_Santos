@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Datos en Formularios </title>
+<script>
+ function saludo()
+ {
+ let operando = document.fdatos.entrada.value
+ let result=operando * 0.10
+ document.write('El 10 por ciento del numero ess '+ result)
+ }
+</script>
+</head>
+<body>
+ <form name="fdatos">
+ Escribe tu nombre: <input type="text" size="10" name="entrada"/>
+ <input type="button" value="Pulsa aquí" onclick="saludo()" />
+ </form>
+</body>
+</html>
