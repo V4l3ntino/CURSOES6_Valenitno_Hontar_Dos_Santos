@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAREA/NAVIDAD</title>
+</head>
+<script>
+    let func1 = () => {
+        operando = document.fdatos.entrada.value
+        operando = operando.toLowerCase() 
+        if (operando=='si') {
+            document.getElementById("enlace").innerHTML = 'Pincha aquí'
+        } else if (operando=='no'){
+            document.write('Buen día')
+        }else{
+            alert('Limitate a poner un si o un no tontito')
+        }
+    }
+</script>
+<body>
+    
+    <form name="fdatos">
+        Has hecho horas extra este mes? <input type="text" size="2" name="entrada"/>
+        <input type="button" value="Pulsa aquí" onclick="func1()" />
+    </form>
+    <a id="enlace" href="./REDIRECT-NAVIDAD.html"></a>     
+
+
+    
+</body>
+</html>

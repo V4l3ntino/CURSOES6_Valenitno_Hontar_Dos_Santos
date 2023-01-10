@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAREA/NAVIDAD</title>
+    <script>
+        let calculo = () => {
+
+            let int1= parseInt(document.fdatos.r1.value)
+            let int2= parseInt(document.fdatos.r2.value)
+            let int3= parseInt(document.fdatos.r3.value)
+            let intsuma=int1+int2+int3
+            alert('El número total de horas realizadas ess '+intsuma)
+            let paytotal= (int1*25)+(int2*40)+(int3*20)
+            alert('total '+paytotal)
+            document.getElementById("mult1").innerHTML = 'El total a pagar entre las ocho y las doce ess '+int1+'*'+'25'+'='+int1*25+'€'
+            document.getElementById("mult2").innerHTML = 'El total a pagar entre las doce y las seis ess '+int2+'*'+'40'+'='+int2*40+'€'
+            document.getElementById("mult3").innerHTML = 'El total a pagar entre las seis y las ocho ess '+int3+'*'+'20'+'='+int3*20+'€'
+            document.getElementById('mult4').innerHTML = 'El total a pagar de todas las horas esss '+ paytotal + '€'
+            
+
+        } 
+    </script>
+</head>
+<body>
+    <!--    
+    <script>
+        let pregunta,name,surname,totalhour,de20a00,de00a6,de6a8,suma,totalextrapay
+
+        do {
+                name=window.prompt("Introduce tu nombre");
+                surname=window.prompt("Introduce tu apellido");
+            if (/[1234567890]/.test(name)||/[1234567890]/.test(surname))
+            {
+                 alert("El nombre y apellidos no tiene numeros, porfavor escribalo de nuevo")
+            }
+
+            }while(/[1234567890]/.test(name)||/[1234567890]/.test(surname))
+            do {    
+                    //Numero total de horas realizadas
+                    do {
+                        totalhour=parseInt(window.prompt("Introduce el numero total de horas extras realizadas?"));
+                        if(isNaN(totalhour)||totalhour>12||totalhour<0){
+                            alert('Las horas extras debes ponerlo con numeros')
+                        }
+                    } while (isNaN(totalhour)||totalhour>12||totalhour<=0);
+                    //Numero total de horas realizadas en cada rango
+                    do {
+                        de20a00=parseInt(window.prompt('Introduce cuantas horas extras has hecho de las 20:00 a 00:00'));
+                        if(isNaN(de20a00)||de20a00>4||de20a00<0){
+                            alert('Debes escribirlo con numeros y no puede ser superior de 4 horas ni inferior de 0')
+                        };
+                    } while (isNaN(de20a00)||de20a00>4||de20a00<0);
+                    do {
+                        de00a6=parseInt(window.prompt('Introduce cuantas horas extras has hecho de las 00:00 a 06:00'));
+                        if(isNaN(de00a6)||de00a6>6||de00a6<0){
+                            alert('Debes escribirlo con numeros y no puede ser superior de 6 horas ni inferior de 0');
+                        }
+                    } while (isNaN(de00a6)||de00a6>6||de00a6<0);
+                    do {
+                        de6a8=parseInt(window.prompt('Introudce cuantas horas extras has hecho de las 06:00 a 08:00'));
+                        if(isNaN(de6a8)||de6a8>2||de6a8<0){
+                            alert('Debes escribirlo con numeros y no puede ser superior de 2 horas ni inferior de 0');
+                        }
+                    } while (isNaN(de6a8)||de6a8>2||de6a8<0);
+                    //Suma de las horas realizadas en cada rango y comparar con el dato inicial
+                    suma = de20a00+de00a6+de6a8
+                    if (suma === totalhour) {
+                        totalextrapay=(de20a00*25)+(de00a6*40)+(de6a8*20)
+                    } else {
+                        alert('NO COINCIDE LOS DATOS');
+                    }
+                } while (suma!=totalhour);
+            document.write('El dinero obtenido por todas las horas extras ess '+totalextrapay+'€');
+
+    </script>
+    -->
+    
+     <form name="fdatos" style="display:grid;">
+        Escribe tu nombre:<input type="text" size="20" name="entrada">
+        Escribe tu apellido:<input type='text' size='20' name='entrada'>
+        <fieldset>
+        Escribe las horas extras en total que has realizado:
+        De 20:00 hasta las 00:00 <select name="range1" id="r1">
+            <option value="0">0h</option>
+            <option value="1">1h</option>
+            <option value="2">2h</option>
+            <option value="3">3h</option>
+            <option value="4">4h</option>
+        </select>
+        De 00: hasta las 06:00 <select name="range2" id="r2">
+            <option value="0">0h</option>
+            <option value="1">1h</option>
+            <option value="2">2h</option>
+            <option value="3">3h</option>
+            <option value="4">4h</option>
+            <option value="5">5h</option>
+            <option value="6">6h</option>
+        </select>
+        De 06:00 hasta las 08:00 <select name="range3" id="r3">
+            <option value="0">0h</option>
+            <option value="1">1h</option>
+            <option value="2">2h</option>
+        </select>
+        </fieldset>
+    <input type="button" value="Pulsa aquí" onclick="calculo()" />
+    </form>
+    <div>
+        <p id="mult1"></p>
+        <p id="mult2"></p>
+        <p id="mult3"></p>
+        <p id="mult4"></p>
+    </div>
+</body>
+</html>
