@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAREA/NAVIDAD</title>
+</head>
+<body>
+    <script>
+        let pregunta,name,surname,totalhour,de20a00,de00a6,de6a8,suma,totalextrapay
+        
+        do {
+            pregunta=window.prompt('Has hecho horas extra este mes?');
+            pregunta=pregunta.toLowerCase();
+            if (pregunta=='si') {
+                alert('HAS DICHO SI');
+            } else if(pregunta=='no'){
+                alert('HAS DICHO NO');
+            }else{
+                alert('RESPONDE CON UN SI O UN NO');
+            }
+        } while (pregunta!=='si'&&pregunta!=='no');
+        if (pregunta=='si') {
+            do {
+                name=window.prompt("Introduce tu nombre");
+                surname=window.prompt("Introduce tu apellido");
+            if (/[1234567890]/.test(name)||/[1234567890]/.test(surname))
+            {
+                 alert("El nombre y apellidos no tiene numeros, porfavor escribalo de nuevo")
+            }
+                
+            }while(/[1234567890]/.test(name)||/[1234567890]/.test(surname))
+            do {    
+                    //Numero total de horas realizadas
+                    do {
+                        totalhour=parseInt(window.prompt("Introduce el numero total de horas extras realizadas?"));
+                        if(isNaN(totalhour)||totalhour>12||totalhour<0){
+                            alert('Las horas extras debes ponerlo con numeros')
+                        }
+                    } while (isNaN(totalhour)||totalhour>12||totalhour<=0);
+                    //Numero total de horas realizadas en cada rango
+                    do {
+                        de20a00=parseInt(window.prompt('Introduce cuantas horas extras has hecho de las 20:00 a 00:00'));
+                        if(isNaN(de20a00)||de20a00>4||de20a00<0){
+                            alert('Debes escribirlo con numeros y no puede ser superior de 4 horas ni inferior de 0')
+                        };
+                    } while (isNaN(de20a00)||de20a00>4||de20a00<0);
+                    do {
+                        de00a6=parseInt(window.prompt('Introduce cuantas horas extras has hecho de las 00:00 a 06:00'));
+                        if(isNaN(de00a6)||de00a6>6||de00a6<0){
+                            alert('Debes escribirlo con numeros y no puede ser superior de 6 horas ni inferior de 0');
+                        }
+                    } while (isNaN(de00a6)||de00a6>6||de00a6<0);
+                    do {
+                        de6a8=parseInt(window.prompt('Introudce cuantas horas extras has hecho de las 06:00 a 08:00'));
+                        if(isNaN(de6a8)||de6a8>2||de6a8<0){
+                            alert('Debes escribirlo con numeros y no puede ser superior de 2 horas ni inferior de 0');
+                        }
+                    } while (isNaN(de6a8)||de6a8>2||de6a8<0);
+                    //Suma de las horas realizadas en cada rango y comparar con el dato inicial
+                    suma = de20a00+de00a6+de6a8
+                    if (suma === totalhour) {
+                        totalextrapay=(de20a00*25)+(de00a6*40)+(de6a8*20)
+                    } else {
+                        alert('NO COINCIDE LOS DATOS');
+                    }
+                } while (suma!=totalhour);
+            document.write('El dinero obtenido por todas las horas extras ess '+totalextrapay+'€');
+        } else if(pregunta=='no'){
+            document.write('Buen dia caballero');
+        }
+        
+        
+        
+
+    </script>
+</body>
+</html>
