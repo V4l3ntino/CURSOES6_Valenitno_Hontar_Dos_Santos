@@ -7,20 +7,19 @@
     <title>TAREA/NAVIDAD</title>
     <script>
         let calculo = () => {
-
+            let name = document.fdatos.nombre.value
+            let surname = document.fdatos.apellido.value
             let int1= parseInt(document.fdatos.r1.value)
             let int2= parseInt(document.fdatos.r2.value)
             let int3= parseInt(document.fdatos.r3.value)
             let intsuma=int1+int2+int3
-            alert('El número total de horas realizadas ess '+intsuma)
+            alert('El número total de horas realizadas por '+name+' '+surname+' ess '+intsuma)
             let paytotal= (int1*25)+(int2*40)+(int3*20)
             alert('total '+paytotal)
             document.getElementById("mult1").innerHTML = 'El total a pagar entre las ocho y las doce ess '+int1+'*'+'25'+'='+int1*25+'€'
             document.getElementById("mult2").innerHTML = 'El total a pagar entre las doce y las seis ess '+int2+'*'+'40'+'='+int2*40+'€'
             document.getElementById("mult3").innerHTML = 'El total a pagar entre las seis y las ocho ess '+int3+'*'+'20'+'='+int3*20+'€'
             document.getElementById('mult4').innerHTML = 'El total a pagar de todas las horas esss '+ paytotal + '€'
-            
-
         } 
     </script>
 </head>
@@ -79,8 +78,8 @@
     -->
     
      <form name="fdatos" style="display:grid;">
-        Escribe tu nombre:<input type="text" size="20" name="entrada">
-        Escribe tu apellido:<input type='text' size='20' name='entrada'>
+        Escribe tu nombre:<input type="text" size="20" maxlength="10" name="nombre">
+        Escribe tu apellido:<input type='text' size='20' maxlength="20" name='apellido'>
         <fieldset>
         Escribe las horas extras en total que has realizado:
         De 20:00 hasta las 00:00 <select name="range1" id="r1">
@@ -106,6 +105,7 @@
         </select>
         </fieldset>
     <input type="button" value="Pulsa aquí" onclick="calculo()" />
+    <a id="enlace" href="./navidad-formulario.html">Volver</a>
     </form>
     <div>
         <p id="mult1"></p>
