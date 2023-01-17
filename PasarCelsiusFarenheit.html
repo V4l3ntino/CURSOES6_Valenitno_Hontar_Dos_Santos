@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Decorado.css">
+    <title>Document</title>
+    <script>
+        function calcula(){
+            let gradoCelsius=document.fdatos.r1.value
+            let resultado=(gradoCelsius * 1.8) + 32;
+            document.fdatos.r2.value=resultado
+        }
+        function calcula2(){
+            let gradoFarenheit=document.fdatos.r2.value
+            let resultado2=(gradoFarenheit - 32) / 1.8;
+            document.fdatos.r1.value=resultado2
+        }
+     
+    </script>
+</head>
+<body>
+    <div class="cuadro">
+        <form name="fdatos">
+            <input placeholder="Celsius" onchange="calcula()" id="r1" type="number">
+            <div class="igual">=</div>
+             <input placeholder="Farenheit" onchange="calcula2()" id="r2" type="number">
+        </form>
+    </div>
+</body>
+</html>

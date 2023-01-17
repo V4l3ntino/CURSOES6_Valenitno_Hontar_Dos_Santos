@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.cuadro{
+    background-color: azure;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    padding: 50px;
+    display: grid;
+    grid-column: auto auto auto;
+}
+#r1{
+    background-color: black;
+    width: 25%;
+    height: 2em;
+    border-radius: 10px;
+    text-align: center;
+}
+#r2{
+    background-color: black;
+    width: 25%;
+    height: 2em;
+    border-radius: 10px;
+    text-align: center;
+}
