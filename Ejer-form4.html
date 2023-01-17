@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calcula(){
+            let dato=parseInt(document.fdatos.r1.value)
+            let cuadrado=dato*dato
+            let cubo=dato*dato*dato
+           document.fdatos.r2.value=cuadrado
+           document.fdatos.r3.value=cubo
+
+        }
+    </script>
+</head>
+
+
+<body>
+    
+
+        <!--
+            Forms 4) Realizar un programa en el cual se introduce un valor numérico en un FORM y como
+    resultado se muestran el resultado de elevar el número al cuadrado y también el resultado de elevar el
+    número al cubo.
+    a) Realizar con una función. b) Realizar con al menos , DOS funciones. 
+        -->
+    
+    <form name="fdatos">
+            Escribe cualquier numero: <input type="number" id="r1"  name="entrada" />
+        <input type="button" name="B1" value="Ejecuta" onclick="calcula()" />
+        <br /><br />
+        Respuesta al cuadrado:<input id="r2" type="number"  name="respuesta"/>
+        Respuesta al cubo: <input id="r3" type="number"  name="respuesta"/>
+    </form>
+</body>
+</html>
