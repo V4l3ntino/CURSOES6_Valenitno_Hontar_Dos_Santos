@@ -8,25 +8,104 @@
     <title>Document</title>
     <script>
         function calcula(){
-            let gradoCelsius=document.fdatos.r1.value
-            let resultado=(gradoCelsius * 1.8) + 32;
-            document.fdatos.r2.value=resultado
+            let input1=document.fdatos.escoger.value
+            let input2=document.fdatos.escoger2.value
+            let rr1=document.fdatos.r1.value
+            let rr2=document.fdatos.r2.value
+            if (input1=='Cel'&&input2=='Far'){
+                let resultado=(rr1 * 1.8) + 32;
+                document.fdatos.r2.value=resultado
+            }else if(input1=='Far'&&input2=='Cel'){
+                let resultado2=(rr1 - 32) / 1.8;
+                document.fdatos.r2.value=resultado2;
+            }else if(input1=='Cel'&&input2=='Cel'){
+                document.fdatos.r2.value=rr1
+            }else if(input1=='Far'&&input2=='Far'){
+                document.fdatos.r2.value=rr1
+            }else if (input1=='Cel'&&input2=='Kel'){
+                let resultado3=(rr1*1)+(273.15*1);
+                document.fdatos.r2.value=resultado3
+            }else if(input1=='Kel'&&input2=='Cel'){
+                let resultado4=rr1-273.15;
+                document.fdatos.r2.value=resultado4;
+            }else if(input1=='Cel'&&input2=='Cel'){
+                document.fdatos.r2.value=rr1
+            }else if(input1=='Kel'&&input2=='Kel'){
+                document.fdatos.r2.value=rr1
+            }else if (input1=='Far'&&input2=='Kel'){
+                let resultado5=((rr1-32)/1.8)+273.15;
+                document.fdatos.r2.value=resultado5
+            }else if(input1=='Kel'&&input2=='Far'){
+                let resultado6=((rr1-273.15)*1.8)+32;
+                document.fdatos.r2.value=resultado6;
+            }else if(input1=='Far'&&input2=='Far'){
+                document.fdatos.r2.value=rr1
+            }else if(input1=='Kel'&&input2=='Kel'){
+                document.fdatos.r2.value=rr1
+            }
         }
         function calcula2(){
-            let gradoFarenheit=document.fdatos.r2.value
-            let resultado2=(gradoFarenheit - 32) / 1.8;
-            document.fdatos.r1.value=resultado2
+            let input1=document.fdatos.escoger.value
+            let input2=document.fdatos.escoger2.value
+            let rr1=document.fdatos.r1.value
+            let rr2=document.fdatos.r2.value
+            if (input2=='Cel'&&input1=='Far'){
+                let resultado3=(rr2 * 1.8) + 32;
+                document.fdatos.r1.value=resultado3
+            }else if(input2=='Far'&&input1=='Cel'){
+                let resultado4=(rr2 - 32) / 1.8;
+                document.fdatos.r1.value=resultado4;
+            }else if(input2=='Cel'&&input1=='Cel'){
+                document.fdatos.r1.value=rr2
+            }else if(input2=='Far'&&input1=='Far'){
+                document.fdatos.r1.value=rr2
+            }else  if (input2=='Cel'&&input1=='Kel'){
+                let resultado5=(rr2*1)+(273.15*1);
+                document.fdatos.r1.value=resultado5
+            }else if(input2=='Kel'&&input1=='Cel'){
+                let resultado6=rr2-273.15;
+                document.fdatos.r1.value=resultado6;
+            }else if(input2=='Cel'&&input1=='Cel'){
+                document.fdatos.r1.value=rr2
+            }else if(input2=='Kel'&&input1=='Kel'){
+                document.fdatos.r1.value=rr2
+            }else if (input2=='Far'&&input1=='Kel'){
+                let resultado7=((rr2-32)/1.8)+273.15;
+                document.fdatos.r1.value=resultado7
+            }else if(input2=='Kel'&&input1=='Far'){
+                let resultado8=((rr2-273.15)*1.8)+32;
+                document.fdatos.r1.value=resultado8;
+            }else if(input2=='Far'&&input1=='Far'){
+                document.fdatos.r1.value=rr2
+            }else if(input2=='Kel'&&input1=='Kel'){
+                document.fdatos.r1.value=rr2
+            }
         }
+    
      
     </script>
 </head>
 <body>
     <div class="cuadro">
-        <form name="fdatos">
-            <input placeholder="Celsius" onchange="calcula()" id="r1" type="number">
-            <div class="igual">=</div>
-             <input placeholder="Farenheit" onchange="calcula2()" id="r2" type="number">
+        <form name="fdatos" class="formulario">
+            <div class="caja1">
+                <input onchange="calcula()" id="r1" type="number" value="0">
+                <select onchange="calcula()" name="selection" id="escoger">
+                    <option value="Cel">Celsius</option>
+                    <option value="0">Punto Muerto</option>
+                    <option value="Far">Farenheit</option>
+                    <option value="Kel">Kelvin</option>
+                </select>
+            </div>
+            <p>=</p>
+            <div class="caja2">
+                <input onchange="calcula2()" id="r2" type="number" value="32">
+                <select onchange="calcula2()" name="selection2" id="escoger2">
+                    <option value="Far">Farenheit</option>
+                    <option value="0">Punto Muerto</option>
+                    <option value="Cel">Celsius</option>
+                    <option value="Kel">Kelvin</option>
+                </select>
+            </div>
         </form>
-    </div>
-</body>
-</html>
+        

@@ -2,27 +2,56 @@
     box-sizing: border-box;
     margin: 0;
 }
+body{
+    background-color: #181A1B;
+}
 
 .cuadro{
-    background-color: azure;
-    width: 40%;
+    background-color:rgba(255, 255, 255, 0.541);
+    width: 800px;
     margin: auto;
+    padding: 100px;
+    margin-top: 250px;
+    border-radius: 20px;
     text-align: center;
-    padding: 50px;
+}
+.formulario{
     display: grid;
-    grid-column: auto auto auto;
+    grid-template-columns: auto auto auto;
+    grid-gap: 50px;
+    width: 100%;
+    margin: auto;
 }
 #r1{
-    background-color: black;
-    width: 25%;
-    height: 2em;
+    background-color: rgba(0, 0, 0, 0.273);
+    width: 100%;
+    height: 5em;
     border-radius: 10px;
+    text-align: left;
+    font-size: 1em;
+    color: white;
     text-align: center;
 }
 #r2{
-    background-color: black;
-    width: 25%;
-    height: 2em;
+    background-color: rgba(0, 0, 0, 0.372);
+    width: 100%;
+    height: 5em;
     border-radius: 10px;
+    text-align: left;
+    font-size: 1em;
+    color: white;
     text-align: center;
+}
+.formulario p{
+    margin-top: 0;
+    font-size: 5em;
+}
+select{
+    background-color: white;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 20px;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
