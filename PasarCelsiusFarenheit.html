@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Decorado.css">
-    <title>Document</title>
+    <title>Conversor</title>
     <script>
         function calcula(){
             let input1=document.fdatos.escoger.value
@@ -89,7 +89,7 @@
     <div class="cuadro">
         <form name="fdatos" class="formulario">
             <div class="caja1">
-                <input onchange="calcula()" id="r1" type="number" value="0">
+                <input onkeyup="calcula()" onchange="calcula()" id="r1" type="number" value="0">
                 <select onchange="calcula()" name="selection" id="escoger">
                     <option value="Cel">Celsius</option>
                     <option value="0">Punto Muerto</option>
@@ -99,7 +99,7 @@
             </div>
             <p>=</p>
             <div class="caja2">
-                <input onchange="calcula2()" id="r2" type="number" value="32">
+                <input onkeyup="calcula2()" onchange="calcula2()" id="r2" type="number" value="32">
                 <select onchange="calcula2()" name="selection2" id="escoger2">
                     <option value="Far">Farenheit</option>
                     <option value="0">Punto Muerto</option>
