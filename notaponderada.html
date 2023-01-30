@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"/>
+<title> Entrada de Datos</title>
+<script>
+
+ let hay_error1=0,hay_error2=0,hay_error3=0,hay_error4=0;   
+ function calculaNota()
+ {
+ if (hay_error1==0&&hay_error2==0&&hay_error3==0&&hay_error4==0) {
+    porcentaje1= parseFloat(document.fdatos.porcentaje1.value);
+ porcentaje2= parseFloat(document.fdatos.porcentaje2.value);
+ nota1 = parseFloat(document.fdatos.nota1.value);
+ nota2 = parseFloat(document.fdatos.nota2.value);
+ document.getElementById("salida").innerHTML=nota1*porcentaje1/100 + nota2*porcentaje2/100;
+ } else {
+    alert('Esto no esta bueno')
+ }
+
+ }
+ function evaluarPorcentaje1(){
+    if ((parseFloat(document.fdatos.porcentaje1.value))< 0 || (parseFloat(document.fdatos.porcentaje1.value)>100)){
+        document.getElementById("e_porcentaje1").innerHTML="Error en el porcentaje";
+        hay_error1=1;
+    }else{
+        document.getElementById("e_porcentaje1").innerHTML="";
+        document.fdatos.porcentaje2.value=100- parseFloat(document.fdatos.porcentaje1.value);
+        hay_error1=0;
+    }   
+
+ }
+ function evaluarPorcentaje2(){
+    if ((parseFloat(document.fdatos.porcentaje2.value))< 0 || (parseFloat(document.fdatos.porcentaje2.value)>100)){
+        document.getElementById("e_porcentaje2").innerHTML="Error en el porcentaje";
+        hay_error2=1;
+
+    }else{
+        document.getElementById("e_porcentaje2").innerHTML="";
+        document.fdatos.porcentaje1.value=100- parseFloat(document.fdatos.porcentaje2.value)
+    }   hay_error2=0;
+
+ }
+ function evaluarNota1(){
+    if ((parseFloat(document.fdatos.nota1.value))< 0 || (parseFloat(document.fdatos.nota1.value)>10)){
+        document.getElementById("e_nota1").innerHTML="Error en la nota";
+        hay_error3=1;
+
+    }else{
+        document.getElementById("e_nota1").innerHTML="";
+        hay_error3=0;
+    }   
+
+ }
+ function evaluarNota2(){
+    if ((parseFloat(document.fdatos.nota2.value))< 0 || (parseFloat(document.fdatos.nota2.value)>10)){
+        document.getElementById("e_nota2").innerHTML="Error en la nota";
+        hay_error4=1;
+
+    }else{
+        document.getElementById("e_nota2").innerHTML="";
+        hay_error4=0;
+    }   
+
+ }
+</script>
+</head>
+<body>
+
+<form name="fdatos">
+ Nota1: <input type="number" size="4" name="nota1" onchange="evaluarNota1()"/> <span id="e_nota1"></span>
+ Porcentaje: <input type="number" size="4" name="porcentaje1" onchange="evaluarPorcentaje1()"/><span id="e_porcentaje1"></span>
+ Nota2: <input type="number" size="4" name="nota2"onchange="evaluarNota2()"/> <span id="e_nota2"></span>
+ Porcentaje: <input type="number" size="4" name="porcentaje2" onchange="evaluarPorcentaje2()"/><span id="e_porcentaje2"></span>
+ <input type="button" name="calcula" value="CALCULAR" onclick="calculaNota()" />
+ <span id="nota"></span>
+
+</form>
+
+<div id ="salida"></div>
+</body>
+</html> 
