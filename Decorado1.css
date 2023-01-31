@@ -1,0 +1,18 @@
+.caja1{
+    
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 5px;
+}
+.caja2{ 
+    
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 5px;
+}
+.supercaja{
+    
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 5px;
+}

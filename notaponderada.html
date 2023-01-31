@@ -2,6 +2,7 @@
 <html>
 <head><meta charset="utf-8"/>
 <title> Entrada de Datos</title>
+<link rel="stylesheet" href="./Decorado1.css">
 <script>
 
  let hay_error1=0,hay_error2=0,hay_error3=0,hay_error4=0;   
@@ -67,11 +68,21 @@
 <body>
 
 <form name="fdatos">
- Nota1: <input type="number" size="4" name="nota1" onchange="evaluarNota1()"/> <span id="e_nota1"></span>
- Porcentaje: <input type="number" size="4" name="porcentaje1" onchange="evaluarPorcentaje1()"/><span id="e_porcentaje1"></span>
- Nota2: <input type="number" size="4" name="nota2"onchange="evaluarNota2()"/> <span id="e_nota2"></span>
- Porcentaje: <input type="number" size="4" name="porcentaje2" onchange="evaluarPorcentaje2()"/><span id="e_porcentaje2"></span>
- <input type="button" name="calcula" value="CALCULAR" onclick="calculaNota()" />
+ <div class="supercaja">
+        <div class="caja1">
+            Nota1: 
+            <input type="number" size="4" name="nota1" onchange="evaluarNota1()"/> <span style="color: red;" id="e_nota1"></span>
+        Porcentaje1: 
+        <input type="number" size="4" name="porcentaje1" onchange="evaluarPorcentaje1()"/><span style="color: red;" id="e_porcentaje1"></span>
+    </div>
+    <div class="caja2">
+            Nota2: <input type="number" size="4" name="nota2"onchange="evaluarNota2()"/> <span style="color: red;" id="e_nota2"></span>
+        Porcentaje2: <input type="number" size="4" name="porcentaje2" onchange="evaluarPorcentaje2()"/><span style="color: red;" id="e_porcentaje2"></span>
+    </div>
+    <div class="caja3">
+        <input type="button" name="calcula" value="CALCULAR" onclick="calculaNota()" />
+    </div>
+ </div>
  <span id="nota"></span>
 
  
