@@ -1,0 +1,106 @@
+<!DOCTYPE html >
+<html>
+<head><meta charset="utf-8"/>
+
+<style type="text/css">
+#contenedor{
+ position: relative;
+ background-color: #C0C0C0;
+}
+#cuadrado1{
+ background-color: #00FF00;
+ width: 100px;height: 100px;
+ position: relative;
+ left: 500px; top: 200px;
+}
+
+</style>
+<script>
+class Cuadrado {
+ constructor() {
+    this._posX = 500;
+    this._posY = 200;
+    console.log("x:"+this._posX+ " : y:"+this._posY);
+ }
+get posX(){
+    return this._posX;
+}
+set posX(incremento){
+    this._posX=this._posX + incremento;
+}
+get posY(){
+    return this._posY;
+}
+set posY(incremento){
+    this._posY=this._posY + incremento;
+}
+
+incrementaX(sentido) {
+    if (sentido=="R")
+        Cuadrado.posX = (Cuadrado.posX || 500) + 20;
+    else Cuadrado.posX = (Cuadrado.posX || 500) - 20;
+ }
+
+ incrementaY(sentido) {
+    if (sentido=="U")
+        Cuadrado.posY = (Cuadrado.posY || 200) - 20;
+    else Cuadrado.posY = (Cuadrado.posY || 200) + 20;
+ }
+ establecerPosX(name) {
+ document.getElementById(name).style.left = Cuadrado.posX + "px";
+ }
+ establecerPosY(name) {
+ document.getElementById(name).style.top = Cuadrado.posY + "px";
+ }
+
+ mostrarPantalla(name) {
+ let cadena = "PosiciónX:" + Cuadrado.posX + " PosiciónY:" + Cuadrado.posY
+ document.getElementById(name).innerHTML = cadena;
+ }
+}
+
+
+function incrementar (nom,accion){
+ objCuadrado = new Cuadrado();
+ if (accion=='U'){
+    objCuadrado.incrementaY("U");
+    objCuadrado.establecerPosY(nom)
+ }else if (accion=='D'){
+    objCuadrado.incrementaY("D");
+    objCuadrado.establecerPosY(nom)
+ }else if (accion=='R'){
+    objCuadrado.incrementaX('R');
+    objCuadrado.establecerPosX(nom)
+ }else if (accion=='L'){
+    objCuadrado.incrementaX('L');
+    objCuadrado.establecerPosX(nom)
+ }
+ 
+ 
+ 
+ objCuadrado.mostrarPantalla(nom);
+
+}
+</script>
+</head>
+<body>
+<div id="contenedor">
+ <div id="cuadrado1" onclick="incrementar('cuadrado1')"></div>
+</div>
+<script>
+    document.addEventListener('keydown', function(event) {
+        if (event.code=="ArrowUp"){
+            incrementar('cuadrado1',"U");
+        }else if (event.code=="ArrowDown"){
+            incrementar('cuadrado1',"D");
+        }else if (event.code=="ArrowRight"){
+            incrementar('cuadrado1',"R");
+        }else if (event.code=="ArrowLeft"){
+            incrementar('cuadrado1',"L");
+        }
+ 
+  
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 50 + ((Altura-150) / 4) *3 + (Edad – 20) /4 * (0.9 si es mujer)
+        function todo(){
+            alert('edad --> '+document.fdatos.alt.value)
+           if (document.fdatos.sex.value=1) {
+            document.getElementById('referencia').innerHTML= 50 + ((document.fdatos.alt.value-150)/4)*3 + (document.fdatos.eda.value-20)/4 * (0.9)
+            
+           } else {
+            50 + ((document.fdatos.alt.value-150)/4)*3 + (document.fdatos.eda.value-20)/4 
+           }
+
+        }
+        function evalua(){
+            var opc[1,1,1]
+            if(document.fdatos.alt.value>2.50||document.fdatos.alt.value<0){
+                document.getElementById('altura').innerHTML='Esto esta mal'
+                opc[0]=1
+            }else{
+                document.getElementById('altura').innerHTML='' 
+                opc[0]=0
+            }
+            if(document.fdatos.eda.value>90||document.fdatos.eda.value<1){
+                document.getElementById('edad').innerHTML='Esto esta mal'
+                opc[1]=1
+            }else{
+                document.getElementById('edad').innerHTML='' 
+                opc[1]=0
+            }
+            if(document.fdatos.pes.value>300||document.fdatos.pes.value<40){
+                document.getElementById('peso').innerHTML='Esto esta mal'
+                opc[2]=1
+            }else{
+                document.getElementById('peso').innerHTML='' 
+                opc[2]=0
+            }
+            if (opc.index0f(1)==-1) {
+                function todo()
+            } else {
+                alert('Esto no esta bien')
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <!--
+Forms 11) Crear programa, en una pàgina web, donde el usuario intruduce su altura (cm), edad, sexo
+y peso actual. El programa responde con una referencia de peso aproximado.
+Por ejemplo : usuario introduce 176, 22, H, 79.
+El programa ejecuta la fórmula: 50 + ((Altura-150) / 4) *3 + (Edad – 20) /4 * (0.9 si es mujer)
+El resultado es: peso referencia = 70,5. 
+    -->
+<form name="fdatos" action="" method="post">
+    <span class="altura"></span>
+    <input placeholder="altura" type="number" min="0" max="2.50" name="alt" id="al">
+    <span class="edad"></span>
+    <input placeholder="edad" min="1" max="90" type="number" name="eda" id="ed">
+    <select name="sex" id="se">
+        <option value="1">Mujer</option>
+        <option value="2">Hombre</option>
+    </select>
+    <span class="peso"></span>
+    <input placeholder="peso" min="40" max="300" type="number" name="pes" id="pe">
+    <input type="button" value="Presiona" onclick="todo()">
+    
+</form>
+<div class="referencia"></div>
+</body>
+</html>

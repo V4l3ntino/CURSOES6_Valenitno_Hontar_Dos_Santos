@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let fila;
+        let columna = parseInt(window.prompt('Inserta el numero de columnas por favor', ''));
+        for (fila = 1; fila < columna; fila++) {
+            for (espacio = columna - fila; espacio > 0; espacio--) document.write('&nbsp;&nbsp;');
+            for (punto = 1; punto < (fila * 2); punto++) document.write('*');
+            document.write('<br/>')
+        }
+        for (fila = columna; fila > 0; fila--) {
+            for (espacio = columna - fila; espacio > 0; espacio--) document.write('&nbsp;&nbsp;');
+            for (punto = 1; punto < (fila * 2); punto++) document.write('*');
+            document.write('<br/>')
+        }     
+    </script>
+</body>
+
+</html>
